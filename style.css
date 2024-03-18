@@ -125,31 +125,33 @@ header span:nth-child(3) {
 
 }
 
-/* style main */
+/* style main - stack */
 main {
     display: flex;
     max-width: 60ch;
+    gap: 2rem 0;
     flex-direction: column;
     justify-content: center;
 }
 
-main section h3 {
+main  h3 {
     width: 100%;
     font-size: 2rem;
     text-align: center;
 }
 
-main section {
+main .stack {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.8rem;
 }
 
-main section article {
+main article {
     padding: 2rem;
     border: 1px dotted #171F29;
     display: flex;
+    width: 100%;
     flex-direction: column;
     row-gap: 0.8rem;
 }
@@ -160,13 +162,25 @@ main section article img {
 
 @media screen and (min-width: 992px) {
    
-    main section article {
+    main .stack article {
         width: 30%;
     }
 
-    main section {
+    main .stack {
         justify-content: space-between;
     }
     
     
 }
+
+
+/* style main - project  */
+
+main .project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+
