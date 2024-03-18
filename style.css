@@ -1,0 +1,148 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+ /* Styles globaux */
+
+ :root {
+    --primary-color : #171F29;
+    --secondary-color : #2577F1;
+    --third-color: #838383;
+    --fourth-color: #F3F4F5;
+    --title-font: 'Playfair Display', serif;
+    --text-font: 'Montserrat', sans-serif;
+ }
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem 0;
+    font-family: var(--text-font);
+    background-color: var(--fourth-color);
+}
+
+
+h2, h3, h4, h5, h6 {
+    font-family: var(--title-font);
+}
+
+h1 {
+    color: var(--third-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+    grid-area: h1;
+
+}
+
+
+/* style header */
+
+header {
+    display: grid;
+    gap: 1.2rem;
+    grid-template-areas: 
+        "img img img"
+        "h1 h1 h1"
+        "h2 h2 h2"
+        "card1 card2 card3"
+        "p p p"
+    ;
+    text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+    header {
+        grid-template-areas: 
+            "img"
+            "h1"
+            "h2"
+            "card1" 
+            "card2" 
+            "card3"
+            "p"
+        ;
+    }
+    
+    
+}
+
+
+header h2 {
+    color: var(--primary-color);
+    font-weight: 800;
+    font-size: 2.5rem;
+    grid-area: h2;
+}
+
+header p {
+    color: var(--third-color);
+    font-size: 1rem;
+    font-weight: 400;
+    grid-area: p;
+}
+
+header img {
+    border-radius: 100%;
+    max-width: 200px;
+    grid-area: img;
+    margin: 0 auto;
+}
+
+header span {
+    background-color: var(--secondary-color);
+    width: fit-content;
+    border-radius: 0.5rem;
+    color: var(--fourth-color);
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    margin: 0 auto;
+}
+
+
+header span:nth-child(1) {
+    grid-area: card1;
+
+}
+
+header span:nth-child(2) {
+    grid-area: card2;
+
+}
+
+header span:nth-child(3) {
+    grid-area: card3;
+
+}
+
+/* style main */
+main {
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 60ch;
+}
+
+main section h3 {
+    width: 100%;
+}
+
+main section {
+    display: flex;
+   
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main section article {
+    width: 33%;
+}
